@@ -11,7 +11,7 @@ cd backend
 docker-compose up -d
 
 ---
-## ejecutar el proyecto
+## ejecutar la app de Escritoio
 
 cd frontend
 npm install
