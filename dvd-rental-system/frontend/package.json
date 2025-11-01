@@ -1,0 +1,14 @@
+{
+  "name": "dvd-rental-frontend",
+  "version": "1.0.0",
+  "description": "Aplicación de escritorio para el sistema de renta de DVD",
+  "main": "main.js",
+  "author": "Cesar Avila, Rico Mendiola",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^31.0.0"
+  }
+}

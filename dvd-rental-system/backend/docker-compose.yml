@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres_dvd
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dvdrental
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./restore.sql:/docker-entrypoint-initdb.d/restore.sql
+
+  api:
+    build: .
+    container_name: dvd_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: dvdrental
