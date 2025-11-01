@@ -9,3 +9,11 @@ Sistema de renta de DVDs con API REST en Node.js PostgreSQL + Docker + Frontend.
 ```bash
 cd backend
 docker-compose up -d
+
+---
+## ejecutar el proyecto
+
+cd frontend
+npm install
+npm start
+
